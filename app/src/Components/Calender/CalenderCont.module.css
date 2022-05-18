@@ -1,0 +1,4 @@
+.calender {
+  box-shadow: 2px 4px 4px rgb(49, 49, 49) !important;
+  transition: ease-in-out 0.5s !important;
+}
