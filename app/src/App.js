@@ -3,8 +3,16 @@ import CalenderCont from "./Components/Calender/CalenderCont";
 import { Col, Container, Row } from "react-bootstrap";
 import CardsContainer from "./Components/Cards/CardsContainer";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+
 function App() {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState(new Date().toISOString());
+  console.log(notes);
+  // const temp = [
+  //   { title: "abc", body: "abs", date: new Date(), current: new Date() },
+  // ];
+  const datas = useSelector((state) => state.data);
+
   return (
     <Container className="mt-2 ">
       <Row>
@@ -14,7 +22,7 @@ function App() {
         </Col>
         <Col sm={6}>
           {" "}
-          <CardsContainer notes={notes} />
+          <CardsContainer notes={datas[notes]} />
         </Col>
       </Row>
     </Container>
