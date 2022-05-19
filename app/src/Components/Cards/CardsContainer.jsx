@@ -19,7 +19,7 @@ function CardsContainer({ notes }) {
 
   return notes ? (
     <Stack gap={3} style={{ width: "20rem" }} className="overflow mx-auto">
-      {notes.map((el, i, arr) => (
+      {notes.map((_, i, arr) => (
         <Cards el={arr[arr.length - i - 1]} key={i} />
       ))}
     </Stack>

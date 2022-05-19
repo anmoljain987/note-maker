@@ -35,7 +35,7 @@ body {
   height: 450px !important;
   padding-right: 10px !important ;
   /* flex-direction: column-reverse !important; */
-  align-items: baseline !important;
+  align-items: stretch !important;
 }
 
 .overflow::-webkit-scrollbar {
