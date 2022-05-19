@@ -7,8 +7,8 @@ import { useSelector } from "react-redux";
 
 function App() {
   const [notes, setNotes] = useState(new Date().toISOString());
-  console.log(notes);
-  // const temp = [
+  console.log("notes", notes);
+  // const temp = [     // Basic Structure of my data
   //   { title: "abc", body: "abs", date: new Date(), current: new Date() },
   // ];
   const datas = useSelector((state) => state.data);

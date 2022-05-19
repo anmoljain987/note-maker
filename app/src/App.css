@@ -32,8 +32,9 @@ body {
 
 .overflow {
   overflow-y: scroll !important;
-  height: 450px !important;
+  height: 370px !important;
   padding-right: 10px !important ;
+  flex-direction: column-reverse !important;
 }
 
 .overflow::-webkit-scrollbar {

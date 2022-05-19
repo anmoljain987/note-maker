@@ -3,16 +3,16 @@ import Calender from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { Form, Button, Toast } from "react-bootstrap";
 import styles from "./CalenderCont.module.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { dataActions } from "../../Store/index";
 function CalenderCont({ setNotes }) {
   const [show, setShow] = useState(false); //This is used to hide the input box when a date is not selected
-  const object = useSelector((state) => state.data);
 
   const intialData = {
     date: new Date().toISOString(),
     title: "",
     body: "",
+    current: new Date().toISOString(),
   };
   const [data, setData] = useState(intialData); // This for handling the state of the submit note
   const dispatch = useDispatch();
@@ -23,21 +23,23 @@ function CalenderCont({ setNotes }) {
 
     setData({ ...data, [name]: value });
   };
-  const { title, date, body } = data;
+
   const onChange = (e) => {
+    //Mainy used to show the Specific Date Data and also setting the date for ui change
     setData({ ...data, date: e.toISOString() });
-    if (object[date] === undefined) {
-      dispatch(dataActions.addDate(date));
-    }
+
     setShow(true);
+
     setNotes(e.toISOString());
   };
-
+  const { title, date, body } = data;
   const submitHandler = (e) => {
+    // This run when Code is submitted , it also handles , set the current date , set the timestamp ,storing data in redux
     e.preventDefault();
-    // setData({ ...data, current: new Date().toISOString() });
-    console.log(data);
+    setData({ ...data, current: new Date().toISOString() });
+    // console.log(data);
     dispatch(dataActions.addData(data));
+    setNotes(date);
     setData(intialData);
     setShow(false);
   };

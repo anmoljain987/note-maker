@@ -8,14 +8,13 @@ const dataSlice = createSlice({
   name: "data",
   initialState,
   reducers: {
-    addDate(state, action) {
-      state.data[action.payload] = [];
-    },
     addData(state, action) {
-      state.data[action.payload.date] = [
-        ...state.data[action.payload.date],
-        action.payload,
-      ];
+      //Making sure that data is defined when submitted and then adding data
+      const { date } = action.payload;
+      if (!state.data[date]) {
+        state.data[date] = [];
+      }
+      state.data[date].push(action.payload);
     },
   },
 });
