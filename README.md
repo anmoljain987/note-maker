@@ -1,6 +1,6 @@
-# Note-maker
+# [Note-maker](https://note-maker-nu.vercel.app)
 - Note Maker is a application which can be used to store notes for a specific upcoming date.
-
+*Live Demo for the application [Note-maker](https://note-maker-nu.vercel.app)*
 ## Tech Stack Used 
  - HTML
  - CSS
