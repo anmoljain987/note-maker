@@ -5,11 +5,19 @@ import { Stack } from "react-bootstrap";
 
 function CardsContainer({ notes }) {
   //   const notes = useSelector((state) => state.data);
-  //   console.log("notes", notes);
-  notes.sort((a, b) => {
-    return new Date(b.date) - new Date(a.date);
-  });
-  return notes.length ? (
+  // if (notes !== undefined && notes.length !== 0) {
+  //   notes.sort((a, b) => {
+  //     return new Date(b.current) - new Date(a.current);
+  //   });
+  // }
+
+  // const temp = notes.slice(0);
+  console.log("notes", notes);
+  // if (temp.length !== 0) {
+  //   temp.sort
+  // }
+
+  return notes ? (
     <Stack gap={3} style={{ width: "20rem" }} className="overflow mx-auto">
       {notes.map((el, i) => (
         <Cards el={el} key={i} />
