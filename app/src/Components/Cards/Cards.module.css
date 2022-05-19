@@ -1,12 +1,18 @@
 .header {
   background: linear-gradient(to top left, #e52a5a, #ff585f) !important;
   color: white !important;
+  text-transform: uppercase !important;
 }
 
 .cards {
   box-shadow: 2px 2px 2px rgb(53, 53, 53) !important;
+  transition: ease-in-out 0.5s !important;
 }
 
 .body {
   background: linear-gradient(to top left, #f3c8d2, #ffffff) !important;
+}
+
+.footer {
+  font-size: smaller !important;
 }

@@ -15,7 +15,7 @@ function Cards({ el }) {
       <Card.Body className={styles.body}>
         <Card.Text>{body}</Card.Text>
       </Card.Body>
-      <Card.Footer className={`text-muted ${styles.body}`}>
+      <Card.Footer className={`text-muted ${styles.body} ${styles.footer}`}>
         <small>{`Created on ${new Intl.DateTimeFormat("en-IN", {
           dateStyle: "full",
           timeStyle: "short",
