@@ -1,5 +1,6 @@
-# Note-maker
-- Note Maker is a application which can be used to store notes for a specific upcoming day.
+# [Note-maker](https://note-maker-nu.vercel.app)
+- Note Maker is a application which can be used to store notes for a specific upcoming date.
+*Live Demo for the application [Note-maker](https://note-maker-nu.vercel.app)*
 ## Tech Stack Used 
  - HTML
  - CSS
@@ -15,3 +16,9 @@
  - Timestamp will be automatically updated
  - Latest note for the specific date will be top.
 
+## Features
+- User can watch the notes created
+- Responsive
+- Previous Dates are not accessible
+- Input Box Hides when no Date is Selected
+![c8da2d8c-247a-48e0-b8fe-2bdc52a33d01](https://user-images.githubusercontent.com/96873348/169252647-0a5203b5-8e3b-46ae-b613-0d5dc19fe324.png)
